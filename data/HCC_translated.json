@@ -1,0 +1,770 @@
+[
+  {
+    "slide_id": "S2014-000094",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma with focal neuroendocrine differentiation and extensive necrosis",
+    "findings": "Tumour 17 × 11 × 10.5 cm; extensive necrosis present; tumour penetrates the liver capsule; resection margin clear.",
+    "immuno": "Hepatocyte (+); CD56 (focal +); Syn (focal +); CgA (–); P63 (–); CK5/6 (–); Vimentin (focal +)."
+  },
+  {
+    "slide_id": "S2015-000592",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3 × 2.5 × 2 cm; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (–); CD34 (vascular +); CEA (–)."
+  },
+  {
+    "slide_id": "S2015-000761",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with focal haemorrhage",
+    "findings": "Tumour 2.5 × 2 × 2.5 cm; haemorrhage and necrosis present; tumour involves the liver capsule; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (+); CD34 (vascular +); CEA (–)."
+  },
+  {
+    "slide_id": "S2015-001048",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 10 × 12 × 8 cm; tumour involves the liver capsule but does not breach it.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (focal +); CK8/18 (focal +); CK19 (–); CD34 (vascular +); CEA (–)."
+  },
+  {
+    "slide_id": "S2015-001298",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "No vascular invasion; no perineural invasion; resection margin clear (closest margin 0.3 cm).",
+    "immuno": "HSP70 (++); GPC3 (+++); CD34 (sinusoidal +); CGA (–); SYN (+); P53 (++); KI-67 (60%+); HepPar-1 (++); CK7 (–); CK19 (–); CK8/18 (focal +)."
+  },
+  {
+    "slide_id": "S2015-001762",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour penetrates the liver capsule; resection margin clear.",
+    "immuno": "CK8/18 (+); HepPar-1 (+++); HSP-70 (+); CD34 (sinusoidal +); CEA (–); SYN (–); KI-67 (40-80%+); CGA (–); CK7 (+)."
+  },
+  {
+    "slide_id": "S2015-002088",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 5 × 4 × 4 cm; necrosis present; tumour involves the liver capsule but does not breach it; no perineural invasion; resection margin clear (closest margin 2 cm).",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (focal +); CK19 (–); CK7 (–); CEA (–); P53 (–); CD34 (vascular +); Ki67 40%."
+  },
+  {
+    "slide_id": "S2015-002260",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 2.5 × 2 × 1.5 cm; necrosis present; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CD34 (vascular +); CK19 (–); CEA (–); Ki67 70%."
+  },
+  {
+    "slide_id": "S2015-002377",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2 × 2 × 1.8 cm; tumour penetrates the liver capsule.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP-70 (+); CK19 (–); CK7 (+); Ck8/18 (+); P53 (–); Ki-67 (index30%); CEA (–); CD34 (vascular +); CD10 (–); CgA (–); SYN (–); NSE (–)."
+  },
+  {
+    "slide_id": "S2016-000409",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 11 × 11 × 8 cm; no vascular invasion.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP-70 (focal +); CK8/18 (+); CK19 (–); CK7 (–); CD34 (vascular +); P53 (+); Ki-67 (index50%); CEA (–); CD10 (–)."
+  },
+  {
+    "slide_id": "S2016-000556",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 1.2 × 1.0 × 0.4 cm; necrosis present.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP-70 (focal +); CK8/18 (+); CK19 (–); CK7 (–); CK20 (–); CD34 (vascular +); P53 (+); Ki-67 (index40%); CEA (–); CD10 (+)."
+  },
+  {
+    "slide_id": "S2016-000594",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "No vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); HSP70 (+); GPC-3 (+); KI-67 (40%+); CK19 (–); CK7 (–); SYN (–); CD10 (–)."
+  },
+  {
+    "slide_id": "S2016-000722",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 0.9 × 0.8 × 0.6 cm.",
+    "immuno": "GPC-3 (+); HepPar-1 (focal +); HSP-70 (focal +); CK8/18 (focal +); CK19 (–); CK7 (–); CD34 (vascular +); Ki-67 (index70%); SYN (–)."
+  },
+  {
+    "slide_id": "S2016-001059",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6 × 5.5 × 4.8 cm.",
+    "immuno": "HEPPAR (focal +); GPC (+); HSP70 (+); CD34 (vascular +); CK7 (–); CEA (–); CK19 (–); CD10 (–); CK8/18 (+)P53 (+); CD31 (+); CD34 (+)."
+  },
+  {
+    "slide_id": "S2016-001509",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 13 × 11 × 5 cm; necrosis present.",
+    "immuno": "Hepatocyte (focal +); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (–); CD34 (vascular +); SYN (–); Ki67 (20%+)."
+  },
+  {
+    "slide_id": "S2016-001510",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2 × 1.6 × 1.7 cm.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (–); CK19 (–); CD34 (vascular +); Ki67 40%+."
+  },
+  {
+    "slide_id": "S2016-001739",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6 × 5 × 6 cm; haemorrhage and necrosis present; vascular invasion present; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP70 (+); CEA (focal +); CK8/18 (+); CK19 (–); CD34 (sinusoidal ++)."
+  },
+  {
+    "slide_id": "S2016-002017",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.6 × 3.3 × 2.1 cm; resection margin involved.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP-70 (+); CK8/18 (–); CK19 (–); CK7 (–); CEA (–); CD34 (vascular +); P53 (+); Ki-67 (index50%); CD10 (–)."
+  },
+  {
+    "slide_id": "S2016-002114",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 8.5 × 7 × 6 cm; haemorrhage and necrosis present; tumour penetrates the liver capsule; resection margin clear.",
+    "immuno": "Hepa-1 (+); GPC-3 (+); CK8/18 (+); CK7 (–); CK19 (–); CD34 (sinusoidal +); Syn (–); CgA (–); Ki-67 (20%+)."
+  },
+  {
+    "slide_id": "S2016-002119",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2 × 1.7 × 1.7 cm; vascular invasion present.",
+    "immuno": "Hepa-1 (+); GPC-3 (+); CK8/18 (+); CK7 (–); CK19 (–); CD34 (sinusoidal +); Syn (–); CgA (–); Ki-67 (30%+)."
+  },
+  {
+    "slide_id": "S2016-002500",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Haemorrhage present; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); CK8/18 (focal +); CK7 (–); CK19 (–); HSP70 (+); CEA (–); P53 (12%+); Ki-67 (40%+)."
+  },
+  {
+    "slide_id": "S2016-003225",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (–); CK8/18 (–); CD34 (sinusoidal +); CK7 (–); CK19 (–); P53 (–); Ki-67 (20%+); Syn (+); CgA (–); CD56 (–)."
+  },
+  {
+    "slide_id": "S2016-003311",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3 × 3 × 2.5 cm; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CD34 (vascular +); CK8/18 (–); CK19 (–); CEA (–); CD10 (+); Ki-67 (30%+)."
+  },
+  {
+    "slide_id": "S2016-003766",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 9 × 8 × 6 cm; haemorrhage and necrosis present; tumour penetrates the liver capsule; no vascular invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CD34 (sinusoidal +); CD10 (+); CK7 (–); CK19 (–); P53 (35-50%+); Ki-67 (25%+); -8Ki-67 (2%+); -9Ki-67 (2%+)."
+  },
+  {
+    "slide_id": "S2016-004369",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "No vascular invasion; no perineural invasion.",
+    "immuno": "Hepatocyte (focal +); GPC-3 (+); HSP70 (+); CK8/18 (+); CK7 (–); CK19 (–); P53 (–); Ki-67 (70%+); CD10 (+); CD34 (vascular +); Hepatocyte (focal +); GPC-3 (+); HSP70 (+); CK8/18 (–); CK7 (–); CK19 (–); P53 (–); Ki-67 (40%+); CD10 (+); CD34 (vascular +)."
+  },
+  {
+    "slide_id": "S2016-004543",
+    "diagnosis": "Well differentiated hepatocellular carcinoma",
+    "findings": "Tumour 10 × 9 × 8 cm; no vascular invasion; no perineural invasion.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP-70 (+); CK8/18 (+); CK19 (–); CK7 (–); CEA (–); CD34 (vascular +); CD10 (+); P53 (–); Ki-67 (index7%)."
+  },
+  {
+    "slide_id": "S2016-004990",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma with focal neuroendocrine differentiation",
+    "findings": "Tumour 5.3 × 5 × 3.4 cm; vascular invasion present; no perineural invasion.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP-70 (+); CK8/18 (+); CK19 (–); CK7 (focal +); CEA (–); CD34 (vascular +); CD10 (+); P53 (+); Ki-67 (index20-60%); CD56 (–); SYN (focal +); CGA (–)."
+  },
+  {
+    "slide_id": "S2016-005092",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 14 × 13 × 8 cm; necrosis present; tumour penetrates the liver capsule; vascular invasion present; no perineural invasion.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CK7 (–); CK19 (+); CEA (–); CD10 (–); CD34 (vascular +); P53 (+); Ki-67 (index30%); CD56 (–); Syn (–); CgA (–); P63 (–); CK20 (–)."
+  },
+  {
+    "slide_id": "S2016-005331",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 5.0 × 4.0 × 1.5 cm; necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); GPC-3 (+); HSP70 (+); CK8/18 (–); CK19 (–); CK7 (–); Ki-67 (30%+)."
+  },
+  {
+    "slide_id": "S2016-005596",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 1 × 1 × 0.6 cm; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (–); CD34 (sinusoidal ++); CD10 (–); Ki-67 (60%+)."
+  },
+  {
+    "slide_id": "S2016-005795",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2 × 2 × 1.5 cm; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); GPC-3 (+); CK8/18 (+); CK19 (+); HSP70 (+); P63 (–); CK20 (–); Ki67 (50%+); CD34 (+); CD10 (+)."
+  },
+  {
+    "slide_id": "S2016-006127",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6 × 6 × 5 cm; necrosis present; tumour penetrates the liver capsule; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP70 (+); CD34 (sinusoidal +); CD10 (+); CK8/18 (focal +); AFP (–); CK7 (–); CK19 (–); P53 (–); Ki-67 (15%+)."
+  },
+  {
+    "slide_id": "S2017-000072",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with extensive necrosis",
+    "findings": "Tumour 12 × 11 × 9 cm; extensive necrosis present; vascular invasion present; no perineural invasion.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP-70 (+); CK8/18 (+); CK19 (+); CK7 (–); CK20 (+); CEA (–); CD34 (vascular +); CD10 (–); P53 (–); Ki-67 (index40%); P40 (–); P63 (–)."
+  },
+  {
+    "slide_id": "S2017-000901",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6.3 × 6 × 5.5 cm; haemorrhage and necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepa-1 (focal +); GPC-3 (+); CK8/18 (focal +); CD34 (sinusoidal +); HSP70 (+); AFP (focal +); CD10 (–); CK7 (–); CK19 (–); Syn (–); CgA (–); P53 (20%+); Ki-67 (20%+)."
+  },
+  {
+    "slide_id": "S2017-000928",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 7.0 × 6.8 × 5.6 cm; necrosis present; tumour penetrates the liver capsule; vascular invasion present; no perineural invasion.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP-70 (+); CK8/18 (–); CK19 (–); CK7 (–); CK20 (–); CEA (–); CD34 (vascular +); CD10 (–); P53 (focal +); Ki-67 (index60%); P63 (–); P40 (–); CD56 (–); SYN (–)."
+  },
+  {
+    "slide_id": "S2017-001425",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 12 × 10 × 10 cm; necrosis present; tumour penetrates the liver capsule.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP-70 (+); CK8/18 (+); CK19 (–); CK7 (–); CK20 (–); CEA (–); CD34 (vascular +); CD10 (–); P53 (–); Ki-67 (index30%)."
+  },
+  {
+    "slide_id": "S2017-001525",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (–); HSP70 (+); CK8/18 (focal +); AFP (–); CD10 (–); CD34 (sinusoidal +); CK7 (focal +); CK19 (–); Syn (–); CgA (–); Ki-67 (35%+)."
+  },
+  {
+    "slide_id": "S2017-001708",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 1.5 × 1.4 × 0.7 cm; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (focal +); AFP (–); CD10 (+); CD34 (sinusoidal +); CK7 (–); CK19 (focal +); Ki-67 (30%+)."
+  },
+  {
+    "slide_id": "S2017-001964",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 10 × 9.5 × 8 cm; necrosis present; no vascular invasion.",
+    "immuno": "HepPar-1 (–); GPC-3 (–); HSP-70 (+); CK8/18 (+); CK19 (–); CK7 (–); CEA (–); CD34 (vascular +); CD10 (–); P53 (–); Ki-67 (index40%); CD34 (vascular +); CD10 (–); CD34 (vascular +); CD10 (–)."
+  },
+  {
+    "slide_id": "S2017-002508",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (–); Ki-67 (10%+; 70%); CD34 (sinusoidal +)."
+  },
+  {
+    "slide_id": "S2017-002673",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 12 × 12 × 10.5 cm; haemorrhage and necrosis present; vascular invasion present; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP70 (+); CK8/18 (focal +); CD34 (sinusoidal +); CD10 (–); AFP (+); CK7 (–); CK19 (–); Ki-67 (30%+)."
+  },
+  {
+    "slide_id": "S2017-002944",
+    "diagnosis": "Moderately differentiated adenocarcinoma with necrosis",
+    "findings": "Tumour 5 × 4 × 3 cm; necrosis present; resection margin clear.",
+    "immuno": "Hepatocyte (–); GPC-3 (–); HSP70 (+); CK8/18 (+); CK19 (+); CK7 (–); Ki-67 (90%+)."
+  },
+  {
+    "slide_id": "S2017-003249",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 4.5 × 4.5 × 3.3 cm; necrosis present; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (focal +); GPC-3 (+); HSP-70 (+); CK8/18 (+); CK19 (–); CK7 (–); CEA (–); CD34 (sinusoidal +); CD10 (–); AFP (–); SYN (–); CGA (–); P53 (–); Ki-67 (20%+)."
+  },
+  {
+    "slide_id": "S2017-003430",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with extensive necrosis",
+    "findings": "Tumour 7 × 7 × 5.5 cm; extensive necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); CK8/18 (+); CK7 (+); CK19 (–); CD34 (sinusoidal +); CD10 (+); GPC-3 (focal +); HSP70 (+)."
+  },
+  {
+    "slide_id": "S2017-004510",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3 × 3 × 2 cm; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (–); CK7 (–); Ki67 (40%+); CD34 (sinusoidal +); CD10 (+)."
+  },
+  {
+    "slide_id": "S2017-005067",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 10.5 × 8.8 × 6.5 cm; extensive necrosis present; tumour penetrates the liver capsule; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (–); GPC-3 (focal +); HSP70 (+); AFP (–); CD34 (sinusoidal +); CK8/18 (focal +); CD10 (–); CK19 (–); CK7 (–); CEA (–); Ki-67 (70%+); D2-40 (+)."
+  },
+  {
+    "slide_id": "S2017-005272",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); HSP70 (+); GPC-3 (+); CK8/18 (+); CK19 (focal +); CK7 (–); CEA (–); Vimentin (–); CD10 (+); CD34 (sinusoidal +); KI-67 (60%+)."
+  },
+  {
+    "slide_id": "S2017-005779",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 4 × 2.5 × 2 cm; necrosis present.",
+    "immuno": "HepPar-1 (–); HSP70 (+); GPC-3 (+); CK8/18 (–); CK19 (–); CK7 (–); AFP (–); CD10 (+); CD34 (sinusoidal +); KI-67 (30%+)."
+  },
+  {
+    "slide_id": "S2017-006217",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3 × 2.5 × 2.3 cm; haemorrhage and necrosis present; tumour involves the liver capsule; resection margin clear.",
+    "immuno": "HepPar-1 (focal +); HSP70 (+); GPC3 (focal +); CK8/18 (+); AFP (–); CD34 (sinusoidal +); CK19 (focal +); CK7 (+); CEA (–); P53 (–); Ki-67 (30%+)."
+  },
+  {
+    "slide_id": "S2017-006584",
+    "diagnosis": "Chronic cholecystitis; moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.0 × 2.5 × 1.8 cm; necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (–); CK19 (–); CK7 (–); CK20 (–); CD34 (sinusoidal +); Ki-67 (60%+)."
+  },
+  {
+    "slide_id": "S2017-007495",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present.",
+    "immuno": "HepPar-1+; CK8/18-; GPC-3+; HSP70+; CD10+; CD34 sinusoidal +; KI-67 40%+; CK7-; CK19-."
+  },
+  {
+    "slide_id": "S2017-007507",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 4.5 × 4.0 × 4.0 cm; tumour involves the liver capsule; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (+); CK7 (–); CEA (–); CD10 (–); CD34 (sinusoidal +); D2-40 (+); Ki67 15%+."
+  },
+  {
+    "slide_id": "S2017-007956",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with haemorrhage",
+    "findings": "Tumour 6.3 × 5 × 5.8 cm; haemorrhage and necrosis present; tumour involves the liver capsule but does not breach it; no perineural invasion.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CK7 (–); CK19 (–); CEA (–); CD10 (+); CD34 (sinusoidal +)."
+  },
+  {
+    "slide_id": "S2017-008227",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 8 × 7 × 5 cm; necrosis present; tumour involves the liver capsule; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (focal +); CK7 (–); CK19 (–); CD34 (sinusoidal +); CD31 (+); ki-67 (10%+)."
+  },
+  {
+    "slide_id": "S2017-008318",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6 × 4 × 3 cm; tumour involves the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (+); CK7 (+); CEA (–); CD10 (+); CD34 (sinusoidal +); D2-40 (+); S-100 (–); Ki67 15%+."
+  },
+  {
+    "slide_id": "S2017-008924",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present; tumour involves the liver capsule but does not breach it; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (+); CK7 (+); CD10 (–); CD34 (sinusoidal +); D2-40 (+); Ki67 15%+."
+  },
+  {
+    "slide_id": "S2018-000261",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 4.5 × 4.5 × 4.3 cm; haemorrhage and necrosis present; no vascular invasion; no perineural invasion; resection margin clear (closest margin 0.2 cm).",
+    "immuno": "Vimentin (–); D2-40 (–); CD34 (–)."
+  },
+  {
+    "slide_id": "S2018-000495",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 5 × 6 × 3 cm; necrosis present; tumour involves the liver capsule but does not breach it; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); GPC-3 (+); HSP70 (+); CK8/18 (+); CK19 (–); CK7 (–); CK20 (–); CEA (–); D2-40 (+); Ki67 35%+."
+  },
+  {
+    "slide_id": "S2018-001061",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 5 × 3 × 3 cm; tumour penetrates the liver capsule; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "CD34 (vascular +); SMA (+); Hepatocyte (–); GPC-3 (+); HSP70 (+); CK8/18 (–); AFP (focal +); CD10 (–); CD34 (sinusoidal +); CK19 (–); CK7 (–); Ki-67 (20%+); -CD34 (vascular +)."
+  },
+  {
+    "slide_id": "S2018-001692",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.5 × 3 × 3 cm; haemorrhage and necrosis present; resection margin clear.",
+    "immuno": "Hepatocyte (+); HSP70 (+); GPC-3 (+); CK8/18 (–); AFP (–); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (–); Ki-67 (20%+)."
+  },
+  {
+    "slide_id": "S2018-002304",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 1.6 × 1.3 × 1.2 cm; necrosis present; tumour involves the liver capsule but does not breach it; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP70 (+); AFP (–); CK7 (–); CK19 (–); CK8/18 (–); CD10 (–); CD34 (sinusoidal ++); D2-40 (–); P40 (–); Ki-67 (25%+)."
+  },
+  {
+    "slide_id": "S2018-006799",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 4.5 × 4.0 × 3 cm; necrosis present; tumour involves the liver capsule but does not breach it.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CD10 (–); CD34 (sinusoidal +); AFP (+); CK8/18 (+); CK19 (–); CK7 (–); Ki-67 (5%+)."
+  },
+  {
+    "slide_id": "S2018-007549",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 8 × 8 × 7 cm; necrosis present; no vascular invasion; no perineural invasion.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CK8/18 (–); CK19 (–); CK7 (–); CEA (–); CD34 (sinusoidal +); CD10 (–); Ki67 (10%+)."
+  },
+  {
+    "slide_id": "S2018-008536",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 5 × 4.5 × 4.5 cm; necrosis present; tumour penetrates the liver capsule; resection margin clear.",
+    "immuno": "Hepatocyte (+); HSP70 (+); GPC-3 (focal +); CK8/18 (focal +); AFP (–); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (focal +); EPCAM (–); E-Cadherin (focal +); NCAM/CD56 (–); N-Cadherin (focal +); EGFR (+); Ki-67 (15%+)."
+  },
+  {
+    "slide_id": "S2018-008832",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3 × 2.8 × 2.5 cm; necrosis present; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); HSP70 (+); GPC-3 (+); AFP (–); CD10 (focal +); CD34 (sinusoidal +); S-100P (focal +); CK19 (–); CK7 (–); EpCAM (focal +); CD56 (–); E-cad (+); N-cad (+); Ki-67 (20%+); -8HBsAg (+)."
+  },
+  {
+    "slide_id": "S2018-010458",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2 × 2 × 1.5 cm; tumour involves the liver capsule; no vascular invasion; resection margin clear.",
+    "immuno": "AFP (–); Hepatocyte (focal +); GPC-3 (+); HSP70 (+); CD10 (+); CD34 (sinusoidal +); CK8/18 (–); CK19 (–); CK7 (–); CEA (–); P53 (–); Ki67 (50%+)."
+  },
+  {
+    "slide_id": "S2019-001253",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.5 × 3.3 × 3.0 cm; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CD10 (+); CD34 (sinusoidal +); AFP (–); CK8/18 (+); CK19 (–); CK7 (–); Ki-67 (3%+)."
+  },
+  {
+    "slide_id": "S2019-002859",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.5 × 3.5 × 3.3 cm; necrosis present; tumour involves the liver capsule but does not breach it; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CD34 (sinusoidal +); AFP (–); CD10 (focal +); CK8/18 (–); CK19 (–); CK7 (+); Ki-67 (5-10%+); HBSAG (+); HBCAG (+)."
+  },
+  {
+    "slide_id": "S2019-00319",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6 × 6 × 5 cm; necrosis present; tumour involves the liver capsule but does not breach it; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); CD34 (sinusoidal +); AFP (–); CD10 (focal +); CK7 (–); CK19 (–); CA19/9 (–); Ki-67 (30%+); CD3 (T+); CD4 (T+); CD8 (T+); HBSAG (–); HBCAG (–)."
+  },
+  {
+    "slide_id": "S2019-003684",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 8.5 × 7 × 6.5 cm; necrosis present; tumour penetrates the liver capsule; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); HSP70 (+); GPC-3 (+); CK8/18 (focal +); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (–); CEA (–); P53 (50%+); Ki-67 (15%+); -5; CD34 (vascular +); HepPar-1 (+)."
+  },
+  {
+    "slide_id": "S2019-004326",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 1.7 × 1.5 × 1.0 cm; tumour involves the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); HSP70 (+); GPC-3 (+); CK8/18 (+); CD10 (+); CD34 (sinusoidal +); CEA (–); CK19 (–); CK7 (–); P53 (–); Ki-67 (60%+)."
+  },
+  {
+    "slide_id": "S2019-006801",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 8 × 6.5 × 4.5 cm; necrosis present; tumour involves the liver capsule; vascular invasion present; resection margin clear.",
+    "immuno": "Hepatocyte (–); HSP70 (+); GPC-3 (focal +); CK8/18 (+); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (–); P53 (–); Ki-67 (60%+); CD3 (+); CD4 (+); CD8 (+)."
+  },
+  {
+    "slide_id": "S2019-007353",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 5.5 × 4.5 × 3 cm; necrosis present; tumour involves the liver capsule but does not breach it; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (–); GPC-3 (+); HSP70 (+); CD34 (sinusoidal +); CD10 (–); CK7 (–); CK19 (–); CK8/18 (focal +); Ki-67 (70%+); HBsAg (+); HBcAg (+)."
+  },
+  {
+    "slide_id": "S2019-007586",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.4 × 3.1 × 2.7 cm; necrosis present; tumour involves the liver capsule but does not breach it; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (–); GPC-3 (+); HSP70 (+); CD10 (–); CD34 (sinusoidal +); AFP (–); CK8/18 (+); CK7 (+); CK19 (+); CGA (–); SYN (–); CD56 (–); Ki-67 (10%+); HBSAG (+); HBCAG (–)."
+  },
+  {
+    "slide_id": "S2019-007589",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2.7 × 2.5 × 2 cm; necrosis present; tumour involves the liver capsule but does not breach it; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (–); HSP70 (+); CD10 (–); CD34 (sinusoidal +); AFP (–); CK7 (focal +); CK19 (–); CK20 (+); Ki-67 (25%+); HBSAG (+); HBCAG (+)."
+  },
+  {
+    "slide_id": "S2019-007680",
+    "diagnosis": "Well differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present and haemorrhage present; tumour involves the liver capsule; no vascular invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); HSP70 (+); GPC-3 (+); CK8/18 (+); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (–); P53 (60%+); Ki-67 (70%+)."
+  },
+  {
+    "slide_id": "S2019-008584",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 14 × 12.5 × 8 cm; haemorrhage and necrosis present; tumour penetrates the liver capsule; resection margin clear.",
+    "immuno": "Hepatocyte (+); HSP70 (+); GPC-3 (focal +); AFP (–); CD10 (+); CD34 (sinusoidal +); D2-40 (+); CK19 (–); CK7 (focal +); Ki-67 (40%+); SYN (–); CGA (–); CD56 (–); HBsAg (–); HBcAg (–)."
+  },
+  {
+    "slide_id": "S2019-008981",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3 × 2.5 × 2.5 cm; necrosis present; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP70 (+); AFP (–); CK8/18 (+); CD10 (+); CD34 (sinusoidal ++); CK7 (–); CK19 (–); Ki-67 (30%+)."
+  },
+  {
+    "slide_id": "S2019-009045",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.5 × 3.3 × 3.3 cm; haemorrhage and necrosis present; tumour involves the liver capsule; no vascular invasion; no perineural invasion; resection margin clear (closest margin 0.1 cm).",
+    "immuno": "Hepatocyte (–); GPC-3 (+); HSP70 (+); CD34 (sinusoidal +); CD10 (–); CK7 (+); CK19 (–); D2-40 (+); S-100 (+); Ki-67 (20%+)."
+  },
+  {
+    "slide_id": "S2019-009608",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 1.5 × 1.2 × 1 cm; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); AFP (–); CD34 (sinusoidal +); CD10 (+); CK7 (focal +); CK19 (–); Ki-67 (25%+); HBsAg (+); HBcAg (–)."
+  },
+  {
+    "slide_id": "S2019-010245",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 5 × 3.7 × 3.5 cm; haemorrhage and necrosis present; no vascular invasion; no perineural invasion; resection margin clear (closest margin 0.5 cm).",
+    "immuno": "MUM1 (+); IgG (+); IgG4 (+); CD4 (+); CD8 (+)."
+  },
+  {
+    "slide_id": "S2019-011693",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6 × 5.5 × 4 cm; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); GPC-3 (+); HSP70 (+); CD34 (sinusoidal +); CD10 (+); CK7 (+); CK19 (–); Ki-67 (15%+); HBsAg (–)."
+  },
+  {
+    "slide_id": "S2019-011783",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6.5 × 5.8 × 3.5 cm; tumour penetrates the liver capsule; vascular invasion present; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC-3 (focal +); HSP70 (+); AFP (–); CD10 (+); CD34 (sinusoidal +); CK8/18 (+); CK19 (–); CK7 (focal +); Ki-67 (30%+); CD3 (+); CD4 (+); CD8 (+)."
+  },
+  {
+    "slide_id": "S2019-012368",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2.3 × 2.3 × 2 cm; necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC-3 (+); HSP70 (+); AFP (focal +)GS (–); CD34 (sinusoidal +); CD10 (–); CK7 (focal +); CK19 (focal +); Ki-67 (20%+); CD68 (+); -8HBsAg (+); HBcAg (+)."
+  },
+  {
+    "slide_id": "S2019-012847",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.6 × 3 × 5.5 cm; extensive necrosis present; tumour involves the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (–); HSP70 (+); GPC-3 (–); AFP (+); CD10 (focal +); CD34 (sinusoidal +); CK19 (focal +); CK7 (–); Ki-67 (70%+); P63 (+); P40 (–); MUC-1 (–); MUC-2 (–); MUC-6 (–); MUC-5AC (–)."
+  },
+  {
+    "slide_id": "S2019-013374",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6 × 5.5 × 5 cm; haemorrhage present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC-3 (focal +); HSP70 (+); AFP (–); CD34 (sinusoidal +); CD10 (+); S-100P (–); CK7 (–); CK19 (–); HBsAg (+); HBcAg (–); Ki-67 (6%+); ：/Masson+."
+  },
+  {
+    "slide_id": "S2019-014871",
+    "diagnosis": "Chronic cholecystitis with gallstones; moderately differentiated hepatocellular carcinoma with haemorrhage and necrosis",
+    "findings": "Tumour 6 × 6 × 5 cm; haemorrhage and necrosis present; tumour involves the liver capsule but does not breach it; no perineural invasion.",
+    "immuno": "GPC-3 (+); HSP70 (+); CK8/18 (–); CK7 (–); CK19 (–); CEA (–); CD10 (–); CD34 (sinusoidal +); P53 (–); Ki-67 (index10%); HepPar-1 (–); AFP (–)."
+  },
+  {
+    "slide_id": "S2019-015177",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2.5 × 2 × 2 cm; necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (–); HSP70 (+); GS (–); CD10 (+); CD34 (sinusoidal +); CK7 (–); CK19 (–); AFP (–); Ki-67 (20%+; 50%+)."
+  },
+  {
+    "slide_id": "S2019-015755",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with extensive necrosis",
+    "findings": "Tumour 11 × 10 × 8 cm; extensive necrosis present; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (–); GPC-3 (+); HSP70 (–); GS (+); CD10 (–); CD34 (sinusoidal +); CK19 (–); CK7 (–); CD31 (vascular +); D2-40 (+); Ki-67 (60%+)."
+  },
+  {
+    "slide_id": "S2019-015851",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 1.4 × 1.4 × 1 cm; no vascular invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); HSP70 (+); GPC-3 (+); GS (+); CK8/18 (focal +); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (–); CEA (–); P53 (–); Ki-67 (60%+)."
+  },
+  {
+    "slide_id": "S2019-016283",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 7 × 8 × 7 cm; necrosis present; tumour penetrates the liver capsule; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "CD34 (sinusoidal +); CD10 (+); HSP70 (+); GPC-3 (+); HepPar-1 (–); GS (–); AFP (–); CK7 (–); CK19 (–); Ki-67 (40%+)."
+  },
+  {
+    "slide_id": "S2020-001063",
+    "diagnosis": "Classical type moderately to poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6.3 × 5.3 × 4.7 cm; necrosis present; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (+); HSP70 (+); CD34 (sinusoidal +); CD10 (+); Ki-67 (40%+); CK7 (–); CK19 (–); AFP (–); GS (+)."
+  },
+  {
+    "slide_id": "S2020-001246",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 6 × 4.3 × 3.5 cm; haemorrhage and necrosis present; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (+); AFP (–); GS (focal +); CD10 (–); CD34 (sinusoidal ++); CK7 (–); CK19 (–); Ki-67 (15%+); -9HBsAg (+); HBcAg (–)."
+  },
+  {
+    "slide_id": "S2020-001292",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2.7 × 2.5 × 2.3 cm; haemorrhage and necrosis present; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (+); HSP70 (+); CD34 (sinusoidal +); CD10 (–); CK7 (–); CK19 (–); AFP (–); CD56 (–); Ki-67 (15%+)."
+  },
+  {
+    "slide_id": "S2020-002654",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 5.5 × 5 × 5 cm; haemorrhage present; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (focal +); HSP70 (+); CD10 (+); CD34 (sinusoidal +); CK7 (–); CK19 (–); Ki-67 (8%+); HBsAg (+); HBcAg (–)."
+  },
+  {
+    "slide_id": "S2020-002906",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 5.5 × 5 × 5.5 cm; haemorrhage and necrosis present; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (–); HSP70 (+); AFP (–); CD10 (+); CD34 (sinusoidal ++); HBsAg (+); HBcAg (–); Ki-67 (20%+)."
+  },
+  {
+    "slide_id": "S2020-003163",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3 × 2.5 × 1.7 cm; necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (–); HSP70 (+); CK7 (–); CK19 (–); CD10 (+); CD34 (sinusoidal +); Ki-67 (10%+); CD3 (T+); CD20 (B+); HBSAg (+); HBcAg (+)."
+  },
+  {
+    "slide_id": "S2020-004030",
+    "diagnosis": "Non-specific moderately differentiated hepatocellular carcinoma with haemorrhage and necrosis",
+    "findings": "Tumour 7.5 × 7.0 × 5.0 cm; haemorrhage and necrosis present; tumour penetrates the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (focal +); GPC-3 (focal +); HSP70 (+); AFP (focal +); CK8/18 (focal +); CD10 (focal +); CD34 (sinusoidal ++); HBsAg (+); HBcAg (–); Ki-67 (25%+)."
+  },
+  {
+    "slide_id": "S2020-004418",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3 × 2 × 2.5 cm; necrosis present; tumour involves the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "CK7 (–); CK19 (–); CK20 (–); HepPar-1 (+); HSP70 (+); GS (focal +); GPC3 (focal +); CD34 (sinusoidal +); CD10 (–); Ki-67 (10%+)."
+  },
+  {
+    "slide_id": "S2020-004724",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2.0 × 1.8 × 1.5 cm; necrosis present; tumour involves the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (+); HSP70 (+); AFP (+); CD34 (sinusoidal +); CK7 (+); CK19 (+); CD10 (+); Ki-67 (20%+); HBcAg (–); HBsAg (–)."
+  },
+  {
+    "slide_id": "S2020-006382",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (focal +); HSP70 (+); AFP (–); CK8/18 (+); CD10 (–); CD34 (sinusoidal ++); CK7 (focal +); CK19 (–); GS (–); P53 (–); Ki-67 (40%+)."
+  },
+  {
+    "slide_id": "S2020-007309",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 4.5 × 3.5 × 3.5 cm; necrosis present; no perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); GPC-3 (+); HSP70 (focal +); AFP (–); CK8/18 (focal +); CD10 (–); CD34 (sinusoidal ++); CK7 (–); CK19 (–); Ki-67 (12%+); -CD34 (vascular +); D2-40 (+)."
+  },
+  {
+    "slide_id": "S2020-007339",
+    "diagnosis": "Well differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.8 × 3.2 × 2.8 cm; necrosis present; tumour involves the liver capsule; no vascular invasion; resection margin clear.",
+    "immuno": "CK19 (–); HSP70 (focal +); CD10 (+); AFP (–); CK7 (+); Ki67 (5%+); GPC3 (–); HBsAg (–); HBcAg (–); HepPar-1 (+)."
+  },
+  {
+    "slide_id": "S2020-008230",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (+); GS (+); HSP70 (+); CD34 (sinusoidal +); AFP (–); CK7 (–); CK19 (–); CD10 (+); Ki67 (10%+); CK19 (+); CK7 (+):."
+  },
+  {
+    "slide_id": "S2020-008713",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Extensive necrosis present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (focal +); GPC3 (–); HSP70 (+); AFP (–); GS (+); CD34 (sinusoidal +); CD10 (–); CK7 (–); CK19 (–); Ki67 (40%+)."
+  },
+  {
+    "slide_id": "S2020-010233",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 3.3 × 3.3 × 2.8 cm; necrosis present; tumour involves the liver capsule but does not breach it; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (+); HSP70 (+); AFP (–); CD34 (sinusoidal ++); CD10 (+); CK7 (focal +); CK19 (–); Ki67 (10%+; 40%)."
+  },
+  {
+    "slide_id": "S2020-010970",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.5 × 2.5 × 2.5 cm; tumour involves the liver capsule but does not breach it; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (+); HSP70 (+); AFP (–); CD34 (sinusoidal +); CD10 (+); CK7 (–); CK19 (–); Ki67 (10%+)."
+  },
+  {
+    "slide_id": "S2020-011999",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 4.0 × 2.5 × 2.2 cm; necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); AFP (–); GPC3 (focal +); HSP70 (+); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (–); HBsAg (+); HBcAg (–); Ki67 (10%+)."
+  },
+  {
+    "slide_id": "S2020-012602",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 4 × 3.5 × 2.6 cm; necrosis present; tumour involves the liver capsule but does not breach it; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (–); HSP70 (+); AFP (focal +); CD34 (sinusoidal +); CD10 (focal +); CK7 (focal +); CK19 (focal +); Ki67 (20%-60%); HBcAg (–); HBsAg (+)."
+  },
+  {
+    "slide_id": "S2021-002908",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (focal +); HSP70 (+); AFP (–); CD34 (sinusoidal +); CD10 (–); CK7 (–); CK19 (–); Ki67 (40%+)."
+  },
+  {
+    "slide_id": "S2021-003822",
+    "diagnosis": "Hyperplastic polyp (rectum, 5 polyps); hyperplastic polyp (descending colon); tubular adenoma, low grade (hepatic flexure, 3 polyps); tubular adenoma, low grade (transverse colon, 2 polyps); chronic mucosal inflammation of rectum",
+    "findings": "Not specified.",
+    "immuno": "Not specified."
+  },
+  {
+    "slide_id": "S2021-004695",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 4.5 × 4.0 × 3.0 cm; necrosis present; tumour involves the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (focal +); AFP (–); GPC3 (focal +); HSP70 (focal +); CD34 (sinusoidal +)."
+  },
+  {
+    "slide_id": "S2021-005212",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present; no vascular invasion; no perineural invasion.",
+    "immuno": "CK19 (+); CK7 (+); CD34 (vascular +); HBsAg (+); HBcAg (–)."
+  },
+  {
+    "slide_id": "S2021-005924",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 4.6 × 2.5 × 2.3 cm; necrosis present; no vascular invasion; resection margin clear.",
+    "immuno": "Hepatocyte (–); HSP70 (+); GPC-3 (+); GS (–); CD10 (+); CD34 (sinusoidal +); CK7 (–); CK19 (focal +); SYN (–); Ki-67 (80%+)."
+  },
+  {
+    "slide_id": "S2021-006934",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 3.5 × 3 × 3.6 cm; necrosis present; tumour involves the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (–); HSP70 (+); CD34 (sinusoidal +); CD10 (+); AFP (–); CK7 (focal +); CK19 (–); Ki67 (20%+)."
+  },
+  {
+    "slide_id": "S2021-009242",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma with haemorrhage",
+    "findings": "Tumour 5 × 4 × 3 cm; haemorrhage and necrosis present; tumour involves the liver capsule; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (–); AFP (–); GPC3 (focal +); HSP70 (+); GS (–); CD10 (+); CD34 (sinusoidal +); CK19 (+); CK7 (–); HBsAg (+); HBcAg (–); Ki67 (30%+)."
+  },
+  {
+    "slide_id": "S2021-010314",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "No perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (focal +); GS (+); HSP70 (+); AFP (+); CD34 (sinusoidal +); CD10 (–); CK7 (–); CK19 (–); Ki67 (5%+); HBsAg (+); HBcAg (–)."
+  },
+  {
+    "slide_id": "S2021-011719",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Haemorrhage present; no perineural invasion; resection margin clear.",
+    "immuno": "CD31 (vascular +); CD34 (vascular +); HepPar-1 (+); GPC3 (focal +); GS (–); HSP70 (+); AFP (–); CD34 (sinusoidal +); CD10 (–); CK7 (–); CK19 (–); Ki67 (50%+); HBsAg (+); HBcAg (+)."
+  },
+  {
+    "slide_id": "S2021-012527",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "No perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (focal +); GPC3 (+); GS (+); HSP70 (+); AFP (-); CD34 (capillarylated); CD10 (+); CK7 (-); CK19 (-); CK20 (-); Ki67 (25%+); HBsAg(+); HBcAg(-)."
+  },
+  {
+    "slide_id": "S2021-013284",
+    "diagnosis": "Poorly differentiated hepatocellular carcinoma",
+    "findings": "Tumour 2 × 1.5 × 1.5 cm; necrosis present; tumour involves the liver capsule; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (focal +); AFP (–); GPC3 (focal +); HSP70 (focal +); GS (–); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (–); HBsAg (–); HBcAg (–); Ki67 (15%+); CK7 (focal +); GPC3 (focal +)."
+  },
+  {
+    "slide_id": "S2021-014670",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "No perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (+); GS (+); HSP70 (+); AFP (focal +); CD34 (sinusoidal +); CD10 (+); CK7 (–); CK19 (focal +); Ki67 (5%+); HBsAg (–); HBcAg (–)."
+  },
+  {
+    "slide_id": "S2021-015537",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (+); GS (–); HSP70 (+); AFP (+); CD34 (sinusoidal +); CD10 (+); CK7 (–); CK19 (–); Ki67 (30%+); HBsAg (+); HBcAg (+)."
+  },
+  {
+    "slide_id": "S2021-018171",
+    "diagnosis": "Well differentiated hepatocellular carcinoma",
+    "findings": "No perineural invasion; resection margin clear.",
+    "immuno": "Hepatocyte (+); HSP70 (+); GS (+); GPC-3 (–); AFP (–); (focal +); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (–); Ki-67 (10%+)."
+  },
+  {
+    "slide_id": "S2021-018942",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Necrosis present; tumour involves the liver capsule; vascular invasion present; resection margin clear.",
+    "immuno": "HepPar-1 (+); AFP (+); GPC3 (+); HSP70 (focal +); GS (focal +); CD10 (+); CD34 (sinusoidal +); CK19 (–); CK7 (–); HBsAg (+); HBcAg (–); Ki67 (25%+)."
+  },
+  {
+    "slide_id": "S2021-020478",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with haemorrhage and necrosis",
+    "findings": "Tumour 4 × 2 × 1.5 cm; haemorrhage and necrosis present; tumour involves the liver capsule; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (–); AFP (–); GPC3 (focal +); HSP70 (+); GS (–); CD10 (+); CD34 (sinusoidal +); CK19 (+); CK7 (–); HBsAg (–); HBcAg (–); Ki67 (15%+)."
+  },
+  {
+    "slide_id": "S2021-022457",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma with necrosis",
+    "findings": "Tumour 2.2 × 2.0 × 1.7 cm; necrosis present; no vascular invasion; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); AFP (–); GPC3 (focal +); HSP70 (+); GS (–); CD34 (sinusoidal +); CK19 (–); CK7 (+); HBsAg (+); HBcAg (–); Ki67 (30%+)."
+  },
+  {
+    "slide_id": "S2021-024040",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 4.5 × 4 × 3.5 cm; necrosis present; tumour penetrates the liver capsule; vascular invasion present; no perineural invasion; resection margin clear.",
+    "immuno": "HepPar-1 (+); GPC3 (focal +); GS (+); HSP70 (+); AFP (–); CD34 (sinusoidal +); CD10 (+); CK7 (focal +); CK19 (–); Ki67 (20%+)."
+  },
+  {
+    "slide_id": "S2022-001570",
+    "diagnosis": "Moderately differentiated hepatocellular carcinoma",
+    "findings": "Tumour 3.5 × 3 × 1 cm; necrosis present; tumour involves the liver capsule; vascular invasion present; no perineural invasion.",
+    "immuno": "HepPar-1 (+), AFP (-), GPC3 (focal +), HSP70 (focal +), GS (focal +), CD10 (capillary bile duct+), CD34 (capillary), CK19 (-), CK7 (-), HBsAg (+), HBcAg (-), Ki67 (20%+)."
+  }
+]
