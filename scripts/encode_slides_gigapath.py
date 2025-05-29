@@ -2,11 +2,11 @@
 """
 encode_slides_gigapath.py
 
-* Scan slide headers recursively, cut tiles, encode with Prov-GigaPath encoder
-  (HF hub: prov-gigapath/prov-gigapath), and save HDF5 containing:
+* Scan slide headers recursively, cut tiles, encode with Prov‑GigaPath encoder
+  (HF hub: prov‑gigapath/prov‑gigapath), and save HDF5 containing:
     - features: (N, 1536)  float16
     - coords:   (N, 2)     int32 (x, y)
-* Safe-resume: valid H5 skipped; corrupted重新生成。
+* Safe‑resume: valid H5 skipped; corrupted rebuild.
 """
 # ---------------------------------------------------------------------
 # 0. HuggingFace credentials & mirror
@@ -29,6 +29,7 @@ from typing import List, Optional
 import h5py
 import numpy as np
 import openslide
+from openslide import OpenSlideError
 import timm
 import torch
 import torchvision.transforms as T
@@ -52,7 +53,7 @@ def is_valid_h5(fp: Path) -> bool:
 def infer_batch(img_tensors, model, device):
     with torch.no_grad():
         batch = torch.stack(img_tensors).to(device).half()
-        return model(batch).cpu().numpy()   # (B, 1536)
+        return model(batch).cpu().numpy()
 
 # ---------------------------------------------------------------------
 # 3. Worker
@@ -79,9 +80,9 @@ def process_slide(
         warnings.warn(f"Corrupted {out_p}, rebuilding…")
         out_p.unlink(missing_ok=True)
 
-    # device
-    pid   = os.getpid()
-    gpu   = gpu_ids[pid % len(gpu_ids)] if gpu_ids else None
+    # device assignment
+    pid    = os.getpid()
+    gpu    = gpu_ids[pid % len(gpu_ids)] if gpu_ids else None
     device = torch.device(f"cuda:{gpu}" if gpu is not None else "cpu")
 
     # encoder & transform (lazy build per process)
@@ -99,16 +100,27 @@ def process_slide(
     # open slide
     try:
         slide = openslide.OpenSlide(str(header))
-    except Exception as e:
+    except OpenSlideError as e:
         return f"fail  {sid}: {e}"
 
+    # check pyramid level
+    num_levels = getattr(slide, 'level_count', len(slide.level_dimensions))
+    if level >= num_levels:
+        slide.close()
+        return f"skip  {sid}: only {num_levels} levels, requested {level}"
+
+    # read dimensions
     W, H = slide.level_dimensions[level]
     feats, coords = [], []
     buf_imgs, buf_xy = [], []
 
+    # tile extraction
     for y in range(0, H, tile):
         for x in range(0, W, tile):
-            img = slide.read_region((x, y), level, (tile, tile)).convert("RGB")
+            try:
+                img = slide.read_region((x, y), level, (tile, tile)).convert("RGB")
+            except Exception:
+                continue
             if np.mean(img) > 240:
                 continue
             buf_imgs.append(tfm(img))
@@ -123,31 +135,38 @@ def process_slide(
         if max_tiles and len(coords) >= max_tiles:
             break
 
+    # final batch
     if buf_imgs:
         feats.append(infer_batch(buf_imgs, model, device))
         coords.extend(buf_xy)
 
     if not feats:
+        slide.close()
         return f"empty {sid}"
 
+    # stack and trim
     feats  = np.vstack(feats)[: max_tiles]
     coords = np.asarray(coords, np.int32)[: max_tiles]
 
+    # write HDF5
     with h5py.File(out_p, "w") as h5:
         h5.create_dataset("features", data=feats, compression="gzip")
         h5.create_dataset("coords",   data=coords, compression="gzip")
+    slide.close()
     return f"done  {sid}: {coords.shape[0]} tiles"
 
 # ---------------------------------------------------------------------
-# 4. Discover headers
+# 4. Discover headers (only container files)
 # ---------------------------------------------------------------------
 
 def collect_headers(root: Path) -> List[str]:
-    pats = ["*.mrxs", "Index.dat", "index.dat", "*.xml"]
-    hdrs = []
-    for p in pats:
-        hdrs.extend(root.rglob(p))
-    return list(dict.fromkeys(map(str, hdrs)))
+    exts = {".mrxs", ".svs", ".tif", ".tiff", ".ndpi",
+            ".vms", ".vmu", ".scn", ".isyntax", ".bif"}
+    paths = []
+    for p in root.rglob("*"):
+        if p.is_file() and p.suffix.lower() in exts:
+            paths.append(str(p))
+    return paths
 
 # ---------------------------------------------------------------------
 # 5. Main
@@ -156,14 +175,14 @@ def collect_headers(root: Path) -> List[str]:
 def main():
     mp.set_start_method("spawn", force=True)
     ap = argparse.ArgumentParser()
-    ap.add_argument("--root", required=True)
-    ap.add_argument("--out",  required=True)
-    ap.add_argument("--level", type=int, default=0)
-    ap.add_argument("--tile",  type=int, default=384)
-    ap.add_argument("--batch_size", type=int, default=32)
-    ap.add_argument("--workers", type=int, default=4)
-    ap.add_argument("--gpu_ids", default="0")
-    ap.add_argument("--model_name", default="hf_hub:prov-gigapath/prov-gigapath")
+    ap.add_argument("--root",      required=True)
+    ap.add_argument("--out",       required=True)
+    ap.add_argument("--level",     type=int, default=0)
+    ap.add_argument("--tile",      type=int, default=384)
+    ap.add_argument("--batch_size",type=int, default=32)
+    ap.add_argument("--workers",   type=int, default=4)
+    ap.add_argument("--gpu_ids",   default="0")
+    ap.add_argument("--model_name",default="hf_hub:prov-gigapath/prov-gigapath")
     ap.add_argument("--max_tiles", type=int, default=None)
     args = ap.parse_args()
 
@@ -172,7 +191,7 @@ def main():
 
     gpu_ids = [int(i) for i in args.gpu_ids.split(',')] if torch.cuda.is_available() and args.gpu_ids else []
     headers = collect_headers(root)
-    print(f"Found {len(headers)} slide headers under '{root}'.")
+    print(f"Found {len(headers)} slide containers under '{root}'.")
 
     worker = partial(process_slide,
                      model_name=args.model_name,

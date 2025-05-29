@@ -7,6 +7,7 @@ Train a GPT-based slide-to-text model using H5 features with prefix mapping,
 then generate outputs on the training set and save them in JSON format (no immuno).
 
 支持 JSON 数组 或 JSONL 作为报告输入；支持可配置的特征维度与 H5 目录。
+在推理阶段可加高斯噪声、调节 temperature/top_p/top_k 采样。
 """
 import os
 import re
@@ -108,6 +109,27 @@ def collate_fn(batch, tokenizer, max_len):
         "labels": labels
     }
 
+class Slide2Text(torch.nn.Module):
+    def __init__(self, lm, mapper):
+        super().__init__()
+        self.lm     = lm
+        self.mapper = mapper
+        self.emb    = lm.get_input_embeddings()
+
+    def forward(self, feat, input_ids=None, attention_mask=None, labels=None):
+        # 映射前缀向量
+        pref = self.mapper(feat).unsqueeze(1)           # (B,1,D)
+        # 取原始 token 嵌入
+        emb_tokens = self.emb(input_ids)                # (B,L,D)
+        emb = torch.cat([pref, emb_tokens], dim=1)      # (B,L+1,D)
+        if attention_mask is not None:
+            one = torch.ones((attention_mask.size(0),1),
+                             device=attention_mask.device)
+            attention_mask = torch.cat([one, attention_mask], dim=1)
+        return self.lm(inputs_embeds=emb,
+                       attention_mask=attention_mask,
+                       labels=labels)
+
 def main():
     parser = argparse.ArgumentParser(description="Train slide2text model and save outputs")
     parser.add_argument("--slide_dir",      type=str,
@@ -129,6 +151,17 @@ def main():
     parser.add_argument("--save_strategy",  type=str, default="epoch")
     parser.add_argument("--eval_strategy",  type=str, default="no")
     parser.add_argument("--logging_steps",  type=int, default=50)
+    # 采样与噪声
+    parser.add_argument("--noise_std",      type=float, default=0.0,
+                        help="Gaussian noise σ added to prefix embedding at generation")
+    parser.add_argument("--temp",           type=float, default=1.0,
+                        help="Sampling temperature")
+    parser.add_argument("--top_p",          type=float, default=0.9,
+                        help="Nucleus sampling p")
+    parser.add_argument("--top_k",          type=int,   default=50,
+                        help="Top-k sampling")
+    parser.add_argument("--repetition_penalty", type=float, default=1.0,
+                        help="Repetition penalty")
     args = parser.parse_args()
 
     SLIDE_DIR = Path(args.slide_dir)
@@ -160,25 +193,7 @@ def main():
 
     lm     = AutoModelForCausalLM.from_pretrained(args.model_name)
     mapper = torch.nn.Linear(FEAT_DIM, prefix_dim, bias=False)
-    class Slide2Text(torch.nn.Module):
-        def __init__(self, lm, mapper):
-            super().__init__()
-            self.lm     = lm
-            self.mapper = mapper
-        def forward(self, feat, input_ids=None, attention_mask=None, labels=None):
-            pref = self.mapper(feat).unsqueeze(1)
-            emb_layer = self.lm.get_input_embeddings()
-            emb = emb_layer(input_ids)
-            emb  = torch.cat([pref, emb], dim=1)
-            if attention_mask is not None:
-                one = torch.ones((attention_mask.size(0),1),
-                                 device=attention_mask.device)
-                attention_mask = torch.cat([one, attention_mask], dim=1)
-            return self.lm(inputs_embeds=emb,
-                           attention_mask=attention_mask,
-                           labels=labels)
-
-    model = Slide2Text(lm, mapper)
+    model  = Slide2Text(lm, mapper)
     lm.gradient_checkpointing_enable()
 
     # 4) 训练参数 & Trainer
@@ -206,7 +221,7 @@ def main():
     )
     trainer.train()
 
-    # 5) 在训练集上推理并保存
+    # 5) 在训练集上推理并保存，加入噪声 & 采样参数
     model.eval()
     outputs = []
     for ex in recs:
@@ -214,13 +229,19 @@ def main():
         f_t  = torch.tensor(feat, dtype=torch.float32).unsqueeze(0).to(train_args.device)
         with torch.no_grad():
             prefix_emb = mapper(f_t).unsqueeze(1)
-            gen_ids     = lm.generate(
+            # 加高斯噪声
+            if args.noise_std > 0:
+                noise = torch.randn_like(prefix_emb) * args.noise_std
+                prefix_emb = prefix_emb + noise
+            gen_ids = lm.generate(
                 inputs_embeds=prefix_emb,
                 max_new_tokens=MAX_LEN,
                 pad_token_id=tokenizer.eos_token_id,
                 do_sample=True,
-                temperature=0.7,
-                top_p=0.9
+                temperature=args.temp,
+                top_p=args.top_p,
+                top_k=args.top_k,
+                repetition_penalty=args.repetition_penalty,
             )
         text = tokenizer.decode(gen_ids[0], skip_special_tokens=True)
         outputs.append({"slide_id": ex["slide_id"], "report": text})
