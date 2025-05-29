@@ -167,7 +167,8 @@ def main():
             self.mapper = mapper
         def forward(self, feat, input_ids=None, attention_mask=None, labels=None):
             pref = self.mapper(feat).unsqueeze(1)
-            emb  = self.lm.transformer.wte(input_ids)
+            emb_layer = self.lm.get_input_embeddings()
+            emb = emb_layer(input_ids)
             emb  = torch.cat([pref, emb], dim=1)
             if attention_mask is not None:
                 one = torch.ones((attention_mask.size(0),1),
