@@ -10,6 +10,10 @@ then generate outputs on the training set and save them in JSON format (no immun
 在推理阶段可加高斯噪声、调节 temperature/top_p/top_k 采样。
 """
 import os
+os.environ["HF_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.environ["HF_TOKEN"]
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+
 import re
 import json
 import h5py
@@ -195,6 +199,10 @@ def main():
     mapper = torch.nn.Linear(FEAT_DIM, prefix_dim, bias=False)
     model  = Slide2Text(lm, mapper)
     lm.gradient_checkpointing_enable()
+
+    # —— 冻结所有 LM 参数，只训练 mapper ——
+    for param in lm.parameters():
+        param.requires_grad = False
 
     # 4) 训练参数 & Trainer
     train_args = TrainingArguments(
