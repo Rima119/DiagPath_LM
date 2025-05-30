@@ -103,7 +103,6 @@ def collate_fn(batch, tokenizer, max_len):
     input_ids = enc.input_ids
     attention_mask = enc.attention_mask
     labels = input_ids.clone()
-    # 在 prefix 位置填 -100，令它不计入 loss
     prefix = torch.full((labels.size(0), 1), -100, dtype=labels.dtype)
     labels = torch.cat([prefix, labels], dim=1)
     return {
@@ -121,11 +120,9 @@ class Slide2Text(torch.nn.Module):
         self.emb    = lm.get_input_embeddings()
 
     def forward(self, feat, input_ids=None, attention_mask=None, labels=None):
-        # 映射前缀向量
-        pref = self.mapper(feat).unsqueeze(1)           # (B,1,D)
-        # 取原始 token 嵌入
-        emb_tokens = self.emb(input_ids)                # (B,L,D)
-        emb = torch.cat([pref, emb_tokens], dim=1)      # (B,L+1,D)
+        pref = self.mapper(feat).unsqueeze(1)
+        emb_tokens = self.emb(input_ids)
+        emb = torch.cat([pref, emb_tokens], dim=1)
         if attention_mask is not None:
             one = torch.ones((attention_mask.size(0),1),
                              device=attention_mask.device)
@@ -137,42 +134,32 @@ class Slide2Text(torch.nn.Module):
 def main():
     parser = argparse.ArgumentParser(description="Train slide2text model and save outputs")
     parser.add_argument("--slide_dir",      type=str,
-                        default="outputs/level2_tile128_h5",
-                        help="Folder containing .h5 feature files")
-    parser.add_argument("--feat_dim",       type=int, default=1536,
-                        help="Dimensionality of each H5 feature vector")
+                        default="outputs/level2_tile128_h5")
+    parser.add_argument("--feat_dim",       type=int, default=1536)
     parser.add_argument("--reports",        type=str,
-                        default="data/HCC_translated.json",
-                        help="Path to JSON/JSONL reports file")
-    parser.add_argument("--model_name",     type=str, default="microsoft/BioGPT-Large")
-    parser.add_argument("--epochs",         type=int, default=3)
-    parser.add_argument("--batch_size",     type=int, default=4)
-    parser.add_argument("--gradient_accumulation", type=int, default=1)
+                        default="data/HCC_translated.json")
+    parser.add_argument("--model_name",     type=str, default="qwen/Qwen-7B")
+    parser.add_argument("--epochs",         type=int, default=100)
+    parser.add_argument("--batch_size",     type=int, default=1)
+    parser.add_argument("--gradient_accumulation", type=int, default=4)
     parser.add_argument("--learning_rate",  type=float, default=2e-5)
-    parser.add_argument("--output_dir",     type=str, default="outputs/slide2text")
+    parser.add_argument("--output_dir",     type=str, default="outputs/slide2text_qwen7b")
     parser.add_argument("--fp16",           action="store_true")
     parser.add_argument("--bf16",           action="store_true")
     parser.add_argument("--save_strategy",  type=str, default="epoch")
     parser.add_argument("--eval_strategy",  type=str, default="no")
     parser.add_argument("--logging_steps",  type=int, default=50)
-    # 采样与噪声
-    parser.add_argument("--noise_std",      type=float, default=0.0,
-                        help="Gaussian noise σ added to prefix embedding at generation")
-    parser.add_argument("--temp",           type=float, default=1.0,
-                        help="Sampling temperature")
-    parser.add_argument("--top_p",          type=float, default=0.9,
-                        help="Nucleus sampling p")
-    parser.add_argument("--top_k",          type=int,   default=50,
-                        help="Top-k sampling")
-    parser.add_argument("--repetition_penalty", type=float, default=1.0,
-                        help="Repetition penalty")
+    parser.add_argument("--noise_std",      type=float, default=0.0)
+    parser.add_argument("--temp",           type=float, default=1.1)
+    parser.add_argument("--top_p",          type=float, default=0.95)
+    parser.add_argument("--top_k",          type=int,   default=50)
+    parser.add_argument("--repetition_penalty", type=float, default=1.05)
     args = parser.parse_args()
 
     SLIDE_DIR = Path(args.slide_dir)
     REPORTS   = Path(args.reports)
     FEAT_DIM  = args.feat_dim
 
-    # 1) 读报告、匹配 slide_id
     id2text = load_reports(REPORTS)
     recs    = build_records(SLIDE_DIR, id2text)
     print(f"🔗 matched {len(recs)} slide-report pairs")
@@ -180,29 +167,32 @@ def main():
         print("❌ No matched pairs. Check slide_dir & reports.")
         return
 
-    # 2) 构造 Dataset
     ds = Dataset.from_list(recs)
     ds = ds.map(load_features, new_fingerprint="feat_loaded")
     ds = ds.remove_columns(["feat_path"])
 
-    # 3) Tokenizer & LM
+    # —— 这里开启 trust_remote_code ——
     tokenizer = AutoTokenizer.from_pretrained(
         args.model_name,
         model_max_length=MAX_LEN,
-        use_fast=True
+        use_fast=True,
+        trust_remote_code=True,
     )
     tokenizer.pad_token = tokenizer.eos_token
-    config = AutoConfig.from_pretrained(args.model_name)
+    config = AutoConfig.from_pretrained(
+        args.model_name,
+        trust_remote_code=True,
+    )
     prefix_dim = config.hidden_size
 
-    lm     = AutoModelForCausalLM.from_pretrained(args.model_name)
+    lm = AutoModelForCausalLM.from_pretrained(
+        args.model_name,
+        trust_remote_code=True,
+    )
     mapper = torch.nn.Linear(FEAT_DIM, prefix_dim, bias=False)
     model  = Slide2Text(lm, mapper)
     lm.gradient_checkpointing_enable()
 
-    # —— **不再冻结任何参数** ——
-
-    # 4) 训练参数 & Trainer
     train_args = TrainingArguments(
         output_dir=args.output_dir,
         per_device_train_batch_size=args.batch_size,
@@ -227,7 +217,6 @@ def main():
     )
     trainer.train()
 
-    # 5) 在训练集上推理并保存，加入噪声 & 采样参数
     model.eval()
     outputs = []
     for ex in recs:
@@ -235,9 +224,6 @@ def main():
         f_t  = torch.tensor(feat, dtype=torch.float32).unsqueeze(0).to(train_args.device)
         with torch.no_grad():
             prefix_emb = mapper(f_t).unsqueeze(1)
-            if args.noise_std > 0:
-                noise = torch.randn_like(prefix_emb) * args.noise_std
-                prefix_emb = prefix_emb + noise
             gen_ids = lm.generate(
                 inputs_embeds=prefix_emb,
                 max_new_tokens=MAX_LEN,
