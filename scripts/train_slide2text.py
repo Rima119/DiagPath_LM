@@ -144,7 +144,7 @@ def main():
     parser.add_argument("--reports",        type=str,
                         default="data/HCC_translated.json",
                         help="Path to JSON/JSONL reports file")
-    parser.add_argument("--model_name",     type=str, default="gpt2-large")
+    parser.add_argument("--model_name",     type=str, default="microsoft/BioGPT-Large")
     parser.add_argument("--epochs",         type=int, default=3)
     parser.add_argument("--batch_size",     type=int, default=4)
     parser.add_argument("--gradient_accumulation", type=int, default=1)
@@ -200,9 +200,7 @@ def main():
     model  = Slide2Text(lm, mapper)
     lm.gradient_checkpointing_enable()
 
-    # —— 冻结所有 LM 参数，只训练 mapper ——
-    for param in lm.parameters():
-        param.requires_grad = False
+    # —— **不再冻结任何参数** ——
 
     # 4) 训练参数 & Trainer
     train_args = TrainingArguments(
@@ -237,7 +235,6 @@ def main():
         f_t  = torch.tensor(feat, dtype=torch.float32).unsqueeze(0).to(train_args.device)
         with torch.no_grad():
             prefix_emb = mapper(f_t).unsqueeze(1)
-            # 加高斯噪声
             if args.noise_std > 0:
                 noise = torch.randn_like(prefix_emb) * args.noise_std
                 prefix_emb = prefix_emb + noise
