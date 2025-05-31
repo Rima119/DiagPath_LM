@@ -1,4 +1,3 @@
-
 import os
 os.environ["HF_TOKEN"] = "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"
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.environ["HF_TOKEN"]
@@ -11,7 +10,7 @@ from collections import OrderedDict
 import torch
 from rouge_score import rouge_scorer
 import sacrebleu
-from bert_score import score as bert_score
+from bert_score import BERTScorer
 import pandas as pd
 
 import os
@@ -22,8 +21,11 @@ os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 print(f"Using device for BERTScore: {device}")
 
-TRAIN_PATH = '../outputs/slide2text_biogpt_multi_unfreeze_100/train_outputs.json'
-TRANS_PATH = '../data/HCC_translated.json'
+TRAIN_PATH = 'outputs/slide2text_gptneo2.7b/train_outputs.json'
+TRANS_PATH = 'data/HCC_translated.json'
+
+# Initialize BERTScorer
+bert_scorer = BERTScorer(lang='en', rescale_with_baseline=True, device=device)
 
 def load_json(path):
     with open(path, 'r', encoding='utf-8') as f:
@@ -51,32 +53,33 @@ for sid, hyp in train_dict.items():
         continue
     ref = trans_dict[sid]
 
+    # Case-insensitive evaluation
     hyp_low = hyp.lower()
     ref_low = ref.lower()
 
-    rouge_l = rouge.score(ref, hyp)['rougeL'].fmeasure
+    # ROUGE-L
+    rouge_l = rouge.score(ref_low, hyp_low)['rougeL'].fmeasure
 
+    # BLEU-4 (using sacrebleu)
     bleu4_score = sacrebleu.sentence_bleu(hyp_low, [ref_low]).score / 100
-
-    sent_bleu_score = sacrebleu.sentence_bleu(
-        hyp_low, [ref_low], smooth_method='exp'
+    
+    # Sentence BLEU with smoothing
+    sent_bleu = sacrebleu.sentence_bleu(
+        hyp_low, 
+        [ref_low],
+        smooth_method='exp',
+        smooth_value=0.1  # Added smoothing
     ).score / 100
 
-    try:
-        P, R, F1 = bert_score(
-            [hyp], [ref], lang='en', rescale_with_baseline=True,
-            device=device, batch_size=64
-        )
-        bert_f1 = F1[0].item()
-    except Exception as e:
-        print(f"BERTScore error for slide {sid}: {e}")
-        bert_f1 = None
+    # Proper BERTScore calculation
+    P, R, F1 = bert_scorer.score([hyp], [ref])
+    bert_f1 = F1.item()
 
     results.append({
         'slide_id': sid,
         'rougeL_f1': rouge_l,
         'bleu4': bleu4_score,
-        'sentence_bleu': sent_bleu_score,
+        'sentence_bleu': sent_bleu,
         'bertscore_f1': bert_f1
     })
 
