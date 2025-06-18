@@ -86,12 +86,6 @@ def get_kv(out):
         return out.past_key_values
     return None
 
-def get_vocab_size(decoder):
-    for p in decoder.parameters():
-        if p.dim() == 2:
-            return p.size(0)
-    raise RuntimeError("embedding matrix not found")
-
 def save_model(model, tok, path):
     os.makedirs(path, exist_ok=True)
     torch.save({k: v.cpu() for k, v in model.state_dict().items()},
@@ -103,8 +97,8 @@ def save_model(model, tok, path):
 def generate_for_dataset(model, tok, dl, out_path, *,
                          amp=True, eos_id=0, bos_id=0,
                          vision_arg, mask_arg):
-    """推断并保存 jsonl"""
-    gen_cfg = dict(max_new_tokens=128, eos_token_id=eos_id, bos_token_id=bos_id)
+    gen_cfg = dict(max_new_tokens=128, eos_token_id=eos_id,
+                   bos_token_id=bos_id, temperature=1.0, top_p=0.9)
     model.eval()
     with torch.no_grad(), open(out_path, "w", encoding="utf-8") as fw, \
          torch.cuda.amp.autocast(enabled=amp):
@@ -129,7 +123,8 @@ def get_args():
     p.add_argument("--slide_dir", required=True)
     p.add_argument("--reports", required=True)
     p.add_argument("--model_name", default="paige-ai/Prism")
-    p.add_argument("--tokenizer_name", default="microsoft/BioGPT-Large")
+    # tokenizer 改为 **microsoft/biogpt** 而不是 Large
+    p.add_argument("--tokenizer_name", default="microsoft/biogpt")
     p.add_argument("--epochs", type=int, default=20)
     p.add_argument("--batch_size", type=int, default=1)
     p.add_argument("--gradient_accumulation", type=int, default=32)
@@ -177,8 +172,6 @@ def main():
     sched = torch.optim.lr_scheduler.LinearLR(opt, start_factor=0.1, total_iters=total)
     scaler = torch.cuda.amp.GradScaler(enabled=not args.no_amp)
 
-    v_model = get_vocab_size(model.text_decoder)
-    unk_id  = tok.unk_token_id or 0
     pad_id  = tok.pad_token_id if tok.pad_token_id is not None else -100
 
     # —— epoch01 baseline ——
@@ -196,14 +189,13 @@ def main():
             feats = batch["features"].cuda().to(model.dtype)
             masks = batch["mask"].cuda()
             ids   = batch["input_ids"].cuda()
-            ids_in = ids.clone(); ids_in[ids_in >= v_model] = unk_id
             with torch.cuda.amp.autocast(enabled=not args.no_amp):
                 out = model(**{vision_arg: feats, mask_arg: masks},
-                            input_ids=ids_in, use_cache=False)
+                            input_ids=ids, use_cache=False)
                 logits = extract_logits(out)
                 loss = F.cross_entropy(
-                    logits.reshape(-1, v_model),
-                    ids_in.reshape(-1),
+                    logits.reshape(-1, logits.size(-1)),
+                    ids.reshape(-1),
                     ignore_index=pad_id
                 )
             scaler.scale(loss).backward()
